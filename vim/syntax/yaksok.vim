@@ -16,7 +16,7 @@ syn keyword ysLoopMada 마다 의 반복
 syn match ysAssign "[:]"
 syn match ysOperator "[\+\-\*/\~]"
 syn region ysString   start=+"+  skip=+\\\\\|\\"+  end=+"+
-  syn match   ysNumber	"\<\%([1-9]\d*\|0\)\>"
+  syn match   ysNumber	"\([^0-9A-Za-z_가-힣]\)\@<=\%([1-9]\d*\|0\)\([^0-9A-Za-z_가-힣]\|$\)\@="
   syn match   ysNumber
 	\ "\<\d\+\.\%([eE][+-]\=\d\+\)\=[jJ]\=\%(\W\|$\)\@="
 syn keyword ysShow 보여주기
